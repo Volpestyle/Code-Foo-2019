@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ContentItemComponent } from './components/content-item/content-item.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'front-end-app';
+  title:string = 'Latest News';
 }

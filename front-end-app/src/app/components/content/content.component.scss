@@ -1,0 +1,81 @@
+@import "../../../variables.scss";
+
+/*-------------
+----Content----
+-------------*/
+
+.item {
+    display: flex;
+    font: 100% $default-font;
+    .item-thumb {
+        display: flex;
+        position: relative;
+        height: auto;
+        max-width: 500px; //max width for thumbnails
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: .3rem;
+        img {
+            max-width:100%;
+            max-height:100%;
+        }
+    }
+    .item-content {
+        padding: 0rem 1rem;
+        width: 100%;
+        h4 {
+            font-size: 23px;
+            font-weight: 800;
+        }
+    }
+       
+}
+
+%postTags {
+    display: inline-block;
+    font: 100% $number-font;
+    font-weight: 700;
+    color: $ign-red;
+    padding-bottom: 1rem;
+}
+.time-posted {
+    @extend %postTags;
+    &::after {
+        content: '-';
+        padding: 0rem .5rem;
+    }
+}
+.comment-count {
+    @extend %postTags;
+    &::before {
+        content: '\f075';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 300;
+        padding-right: .3rem;
+    }
+}
+.duration {
+    @extend %postTags;
+    padding-bottom: 0;
+    font-weight: 600;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin: 10px;
+    padding: 10px;
+    background-color: $ign-red;
+    color: white;
+    &::before {
+        content: '\f144';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        padding-right: .3rem;
+    }
+}
+
+//Separator between articles
+.divider {
+    border-bottom: .1rem solid $light-grey;
+    margin: 1rem 0rem;
+  }

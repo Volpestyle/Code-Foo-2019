@@ -1,0 +1,44 @@
+@import "../../../variables.scss";
+
+/*-------------
+------Nav------
+-------------*/
+
+.menu {
+    font: 100% $default-font;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    display: flex;
+    height: 163px; //MAKE IT ALIGN
+}
+
+.list-group {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    .list-group-item {
+        display: flex;
+        border: 0;
+        height: 100%;
+        align-items: center;
+        color: $dark-grey;
+        &:hover {
+            background-color: $light-grey;
+        }
+        span {
+            padding-left: 1.3rem;
+        }
+        
+    }
+    .active {
+        border: 0;
+        background-color:$ign-red;
+        color: white;
+        font-weight: 700;
+        &:hover {
+            background-color:$ign-red;
+        }
+    }
+}
+
