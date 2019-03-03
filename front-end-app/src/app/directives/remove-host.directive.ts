@@ -1,3 +1,5 @@
+//https://stackoverflow.com/a/35837189
+
 import { Directive, ElementRef} from '@angular/core';
 
 //remove the host of avatar to be rendered as svg

@@ -1,13 +1,24 @@
 <div class="item">
     <div class="item-thumb">
-        <a href="{{item.slug}}">
-            <img src="" alt="">
-            <span class="duration">2:09</span>
+        <a href="{{item.metadata.slug}}">
+            <img src="{{item.thumbnails[2].url}}" alt="">
+            <ng-template [ngIf]="item.metadata.duration">
+                <span class="duration">{{ item.metadata.duration | formatDuration }}</span>
+            </ng-template>
         </a>
     </div>
     <div class="item-content">
-        <span class="time-posted">5m</span><span class="comment-count">{{ numberOfComments }}</span>
-        <h4>{{ title }}</h4>
+        <span class="time-posted">{{ item.metadata.publishDate | timeAgo }}</span>
+        <ng-template [ngIf]="info">
+            <span class="comment-count">{{ info.count }}</span>
+        </ng-template>
+        <a href={{item.metadata.slug}}>
+            <h4>
+                <div *ngIf="item.metadata.headline; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>{{ item.metadata.headline }}</ng-template>
+                <ng-template #elseBlock><h4>{{ item.metadata.title }}</h4></ng-template>
+            </h4>
+        </a>
     </div>
 </div>
 <div class="divider"></div>

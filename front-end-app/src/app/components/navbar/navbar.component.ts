@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { NavItem } from '../../models/NavItem';
+import { NavItemService } from '../../services/nav-item.service';
 
 @Component({
   selector: 'app-navBar',
@@ -10,26 +11,9 @@ import { NavItem } from '../../models/NavItem';
 export class NavbarComponent implements OnInit {
   navItems:NavItem[];
 
-  constructor() { }
+  constructor(private NavItemService:NavItemService) { }
 
   ngOnInit() {
-    this.navItems = [
-      {
-        href: "",
-        title: "Latest",
-        fontAwesome: "far fa-check-circle fa-lg"
-      },
-      {
-        href: "",
-        title: "Videos",
-        fontAwesome: "fas fa-play fa-lg"
-      },
-      {
-        href: "",
-        title: "Articles",
-        fontAwesome: "far fa-file-alt fa-lg"
-      },
-    ]
+    this.navItems = this.NavItemService.getItems();
   }
-
 }

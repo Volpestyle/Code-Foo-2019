@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:600,700');
-@import "assets/css/bootstrap.css";
 @import "assets/font-awesome/css/all.min.css";
 @import "variables.scss";
 
@@ -13,6 +12,9 @@ input:focus,
 textarea:focus,
 button:focus {
     outline: none;
+}
+a:hover {
+    text-decoration: none;
 }
 
 /*-------------

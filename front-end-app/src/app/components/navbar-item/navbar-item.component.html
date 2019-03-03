@@ -1,4 +1,4 @@
-<a href={{navItem.href}} class="list-group-item">
+<a [ngClass]="setClasses()" (click)="onClick(navItem)" href="#">
     <i class={{navItem.fontAwesome}}></i>
     <span>{{navItem.title}}</span>
 </a>

@@ -1,15 +1,30 @@
-export class ContentItem {
-    thumbnails: [
-        {
-            url:String,
-            size:String,
-            width:Number,
-            height:Number,
-        }
-    ]
-    slug:String;
-    title:String;
-    publishDate:Date;
+import { Thumbnail } from '../models/Thumbnail';
+import {Deserializable} from "./deserializable";
+
+export class ContentItem implements Deserializable{
+    authors:String[];
+    contentId:String;
     contentType:String;
-    numberOfComments:Number;
+    metadata: {
+        description:String;
+        duration:Number;
+        headline:String;
+        networks:String[];
+        publishDate:Date;
+        slug:String;
+        state:String;
+        title:String;
+        videoSeries:String;
+    }
+    tags: String[];
+    title:String;
+    thumbnails:Thumbnail[];
+
+    deserialize(input: any):ContentItem {
+        Object.assign(this, input);
+        //this cars = input.cars.map((car) => new Car().deserialze(car));
+        this.thumbnails = input.thumbnails.map((thumbnail) => new Thumbnail().deserialize(thumbnail));
+        return this;
+    };
 }
+

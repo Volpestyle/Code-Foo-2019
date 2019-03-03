@@ -1,5 +1,8 @@
-import { Component, OnInit, Input} from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { Component, OnInit, Input, Output} from '@angular/core';
+import { NavItem } from '../../models/NavItem';
+import { NavItemService } from '../../services/nav-item.service';
+import { EventEmitter } from '@angular/core';
+import { FilterContentService } from 'src/app/services/filter-content.service';
 
 @Component({
   selector: 'app-navbar-item',
@@ -7,9 +10,24 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
   styleUrls: ['./navbar-item.component.scss']
 })
 export class NavbarItemComponent implements OnInit {
-  @Input() navItem: NavbarComponent;
+  @Input() navItem: NavItem;
   
-  constructor() {};
+  constructor(private navItemService:NavItemService, private filterContentService:FilterContentService) {};
 
-  ngOnInit() {};
+  ngOnInit() {
+  };
+
+  setClasses() {
+    let classes = {
+      "list-group-item": true,
+      "active": this.navItem.isActive
+    }
+    return classes;
+  }
+  onClick(navItem) {
+    this.navItemService.resetActive();
+    navItem.isActive = !navItem.isActive;
+    this.filterContentService.filterType = navItem.filter;
+    console.log(this.filterContentService.filterType);
+  }
 }
