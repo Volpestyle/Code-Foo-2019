@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FilterContentService } from './services/filter-content.service';
 //declare function activeNav(): any;
 @Component({
@@ -9,10 +9,8 @@ import { FilterContentService } from './services/filter-content.service';
 })
 export class AppComponent {
   
-  constructor(private filterContentService:FilterContentService) {
+  constructor(public filterContentService:FilterContentService) {
 
-  }
-  ngOnInit() {
   }
 
   title:string = 'Latest News';

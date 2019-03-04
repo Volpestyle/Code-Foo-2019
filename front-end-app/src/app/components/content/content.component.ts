@@ -1,12 +1,9 @@
-import { Component,  HostBinding, OnInit } from '@angular/core';
-import { ContentItem } from '../../models/ContentItem';
+import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../../services/content.service';
 import { FilterContentService } from '../../services/filter-content.service';
 import {
   trigger,
-  state,
   query,
-  stagger,
   keyframes,
   style,
   animate,
@@ -31,7 +28,7 @@ import {
 })
 export class ContentComponent implements OnInit {
   
-  constructor(private contentService:ContentService, private filterContentService:FilterContentService) { }
+  constructor(private contentService:ContentService, public filterContentService:FilterContentService) { }
 
   ngOnInit() {
     this.contentService.getContent().subscribe(items => {

@@ -1,4 +1,4 @@
-import { Component,  HostBinding, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ContentService } from '../../services/content.service';
 import { CommentInfo } from '../../models/CommentInfo';
 import { ContentItem } from 'src/app/models/ContentItem';
@@ -7,8 +7,6 @@ import {
   style,
   animate,
   transition,
-  query,
-  keyframes,
   // ...
 } from '@angular/animations';
 import { FilterContentService } from 'src/app/services/filter-content.service';
@@ -30,7 +28,7 @@ export class ContentItemComponent implements OnInit {
   @Input() item: ContentItem;
   info:CommentInfo;
 
-  constructor(private contentService:ContentService, private filterContentService:FilterContentService) { }
+  constructor(private contentService:ContentService) { }
 
   ngOnInit() {
     this.contentService.getCommentInfo(this.item.contentId).subscribe(data => {

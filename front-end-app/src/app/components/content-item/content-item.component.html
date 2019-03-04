@@ -1,7 +1,7 @@
-
 <div class="item">
     <div class="item-thumb">
         <a href="{{item.metadata.slug}}">
+            <!-- only use large image -->
             <img src="{{item.thumbnails[2].url}}" alt="">
             <ng-template [ngIf]="item.metadata.duration">
                 <span class="duration">{{ item.metadata.duration | formatDuration }}</span>

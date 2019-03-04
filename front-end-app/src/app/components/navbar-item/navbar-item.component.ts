@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output} from '@angular/core';
 import { NavItem } from '../../models/NavItem';
 import { NavItemService } from '../../services/nav-item.service';
-import { EventEmitter } from '@angular/core';
 import { FilterContentService } from 'src/app/services/filter-content.service';
 
 @Component({
@@ -12,7 +11,7 @@ import { FilterContentService } from 'src/app/services/filter-content.service';
 export class NavbarItemComponent implements OnInit {
   @Input() navItem: NavItem;
   
-  constructor(private navItemService:NavItemService, private filterContentService:FilterContentService) {};
+  constructor(private navItemService:NavItemService, public filterContentService:FilterContentService) {};
 
   ngOnInit() {
   };
