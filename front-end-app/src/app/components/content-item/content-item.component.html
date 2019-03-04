@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="item-content">
-        <span class="time-posted">{{ item.metadata.publishDate | timeAgo }}</span>
+        <span class="time-posted">{{ item.metadata.publishDate | timeago:live}}</span>
         <span @commentIntro class="comment-count">
             <div *ngIf="info && info.count > 0; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>{{ info.count }}</ng-template>
