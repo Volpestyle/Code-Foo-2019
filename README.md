@@ -15,7 +15,7 @@ Inside the Content component, Services are used to request the content from the 
 Inside the Navbar component, a Service is used to request each NavItem. The Model data of each NavItem is simply hard-coded into the Service.  
 
 ### HTTP Requests
-All HTTP requests for content within the app reside in a Service cleverly named ContentService. Here I used the HTTPClient Module to make a JSONP request to the api. (The important thing here is that a JSONP request is used. IGN's api supports JSONP so that clients can bypass the [Same Origin Policy](https://gist.github.com/jesperorb/6ca596217c8dfba237744966c2b5ab1e))
+All HTTP requests for content within the app reside in a Service cleverly named 'ContentService'. Here I used the 'HTTPClient' Module to make a JSONP request and return whats known as an 'Observable'. (The important thing here is that a JSONP request is used. IGN's api supports JSONP so that clients can bypass the [Same Origin Policy](https://gist.github.com/jesperorb/6ca596217c8dfba237744966c2b5ab1e))
 
 ### Services
 
