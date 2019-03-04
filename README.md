@@ -11,7 +11,7 @@ I first built a static mockup of the app with HTML and Sass, using Bootstrap to 
 
 ### Components
 I split my static website into two parent components: 'NavbarComponent' and 'ContentComponent'. NavbarComponent contains children components named 'NavbarItemComponent', while ContentComponent contains children named 'ContentItemComponent'. As you can imagine, a NavbarItem is represented in the app by each option in the navigation menu: Latest, Videos, and Articles. A ContentItem is represented by each article or video listed on the page. <br />
-Inside ContentComponent, Services are used to request the content from the api and store it into an array of models. Using `*ngFor`, this array of models is used to initialize the children ContentItemComponents. Inside each ContentItemComponent, a Service is used to make another api request for the given article or video's comments. <br />
+Inside ContentComponent, Services are used to request the content from the api and store it into an array of [models](https://github.com/Volpestyle/Code-Foo-2019/blob/master/README.md#models). Using `*ngFor`, this array of models is used to initialize the children ContentItemComponents. Inside each ContentItemComponent, a Service is used to make another api request for the given article or video's comments. <br />
 Inside the NavbarComponent, a Service is used to request each NavbarItem. The data for each NavbarItem is simply hard-coded into the Service.  
 
 ### Services
