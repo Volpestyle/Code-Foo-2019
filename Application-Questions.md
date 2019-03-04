@@ -1,4 +1,4 @@
-# Questions!
+# Question Time!
 
 ## 1.)
 Introduce yourself, explain your connection to IGN, and tell us why we should pick you to participate in IGN’s Code Foo program. Show your enthusiasm and passion for IGN in the form of a YouTube/Vimeo video, written document, audio track, or whatever format you feel most comfortable with. 
