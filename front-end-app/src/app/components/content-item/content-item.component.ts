@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContentService } from '../../services/content.service';
+import { TimeagoIntl } from 'ngx-timeago';
 import { CommentInfo } from '../../models/CommentInfo';
 import { ContentItem } from 'src/app/models/ContentItem';
 import {
@@ -27,7 +28,8 @@ import { FilterContentService } from 'src/app/services/filter-content.service';
 export class ContentItemComponent implements OnInit {
   @Input() item: ContentItem;
   info:CommentInfo;
-
+  live:boolean = true;
+  
   constructor(private contentService:ContentService) { }
 
   ngOnInit() {
