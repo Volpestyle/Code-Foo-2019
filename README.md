@@ -14,10 +14,11 @@ I split my static website into two parent components: 'Navbar' and 'Content'. Na
 Inside the Content component, Services are used to request the content from the api and store it into an array of Models. Using `*ngFor`, this array of Models is used to initialize the children ContentItem components. Inside each ContentItem componenent, a Service is used to make another api request for the given article or video's comments. <br />
 Inside the Navbar component, a Service is used to request each NavItem. The Model data of each NavItem is simply hard-coded into the Service.  
 
-### HTTP Requests
-All HTTP requests for content within the app reside in a Service cleverly named 'ContentService'. Here I used the 'HTTPClient' Module to make a JSONP request and return whats known as an 'Observable'. (The important thing here is that a JSONP request is used. IGN's api supports JSONP so that clients can bypass the [Same Origin Policy](https://gist.github.com/jesperorb/6ca596217c8dfba237744966c2b5ab1e))
-
 ### Services
+It is the [*Angular way*](https://angular.io/tutorial/toh-pt4#why-services) to use services to access data instead of components. This is why I used one for HTTP the requests. In addition, they allow for [bi-directional communication](https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service) between components, which was helpful in the case of filtering content results.
+
+#### HTTP Requests
+All HTTP requests for content within the app reside in a Service cleverly named 'ContentService'. Here I used the 'HTTPClient' Module to make a JSONP request and return whats known as an 'Observable'. (The important thing here is that a JSONP request is used. IGN's api supports JSONP so that clients can bypass the [Same Origin Policy](https://gist.github.com/jesperorb/6ca596217c8dfba237744966c2b5ab1e))
 
 ### Use of Models
 I created a set of models to handle the json being returned by the api
