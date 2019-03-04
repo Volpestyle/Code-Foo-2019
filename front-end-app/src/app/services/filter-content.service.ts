@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ContentItem } from '../models/ContentItem';
-import { Subject }    from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,18 +12,21 @@ export class FilterContentService {
   get filterType():string {
     return this._filterType;
   }
+
   set filterType(value:string) {
     this._filterType = value;
-    this.filteredContent = this.filterContent(value);
-    console.log(this.filteredContent);
+    this.filteredContent = [];
+    var that = this;
+    setTimeout( () => { //Let items fade out
+      that.filteredContent = that.filterContent(value);
+    },500);
   }
 
   constructor() { }
 
   initContent(items:any) {
     this.contentItems = items.data.map((item:ContentItem) => new ContentItem().deserialize(item));
-    this.filteredContent = this.contentItems;
-    console.log(this.contentItems);
+    this.filteredContent = this.contentItems.slice();
   }
 
   filterContent(filterString: string) {

@@ -1,3 +1,4 @@
+
 <div class="item">
     <div class="item-thumb">
         <a href="{{item.metadata.slug}}">
@@ -9,8 +10,8 @@
     </div>
     <div class="item-content">
         <span class="time-posted">{{ item.metadata.publishDate | timeAgo }}</span>
-        <ng-template [ngIf]="info">
-            <span class="comment-count">{{ info.count }}</span>
+        <ng-template [ngIf]="info && info.count > 0">
+            <span @commentIntro class="comment-count">{{ info.count }}</span>
         </ng-template>
         <a href={{item.metadata.slug}}>
             <h4>

@@ -28,6 +28,6 @@ export class NavbarItemComponent implements OnInit {
     this.navItemService.resetActive();
     navItem.isActive = !navItem.isActive;
     this.filterContentService.filterType = navItem.filter;
-    console.log(this.filterContentService.filterType);
+    //console.log(this.filterContentService.filterType);
   }
 }

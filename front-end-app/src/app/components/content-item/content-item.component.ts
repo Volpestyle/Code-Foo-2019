@@ -1,18 +1,36 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component,  HostBinding, OnInit, Input } from '@angular/core';
 import { ContentService } from '../../services/content.service';
 import { CommentInfo } from '../../models/CommentInfo';
 import { ContentItem } from 'src/app/models/ContentItem';
+import {
+  trigger,
+  style,
+  animate,
+  transition,
+  query,
+  keyframes,
+  // ...
+} from '@angular/animations';
+import { FilterContentService } from 'src/app/services/filter-content.service';
 
 @Component({
   selector: 'app-content-item',
   templateUrl: './content-item.component.html',
-  styleUrls: ['./content-item.component.scss']
+  styleUrls: ['./content-item.component.scss'],
+  animations: [
+    trigger('commentIntro', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('.7s ease-in', style({ opacity: 1 })),
+      ]),
+    ]) 
+  ]
 })
 export class ContentItemComponent implements OnInit {
   @Input() item: ContentItem;
   info:CommentInfo;
 
-  constructor(private contentService:ContentService) { }
+  constructor(private contentService:ContentService, private filterContentService:FilterContentService) { }
 
   ngOnInit() {
     this.contentService.getCommentInfo(this.item.contentId).subscribe(data => {
@@ -20,6 +38,7 @@ export class ContentItemComponent implements OnInit {
       this.getCommentInfo(data);
     })
   }
+  
   getCommentInfo(commentData:any) {
     //Since an array is returned, but we only ask for one id.
     this.info = new CommentInfo().deserialize(commentData.content[0]); 

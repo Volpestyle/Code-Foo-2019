@@ -4,7 +4,8 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { RemoveHost } from './directives/remove-host.directive'; //To make transferring style sheets easier
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'; //Bootstrap without JQuery
-import { FormsModule } from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +33,7 @@ import { FilterContentService } from './services/filter-content.service';
     HttpClientModule,
     HttpClientJsonpModule,
     NgbModule,
-    FormsModule
+    BrowserAnimationsModule
   ],
   providers: [FilterContentService],
   bootstrap: [AppComponent]

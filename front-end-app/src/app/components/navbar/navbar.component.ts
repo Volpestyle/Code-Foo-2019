@@ -6,7 +6,7 @@ import { NavItemService } from '../../services/nav-item.service';
   selector: 'app-navBar',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
   navItems:NavItem[];

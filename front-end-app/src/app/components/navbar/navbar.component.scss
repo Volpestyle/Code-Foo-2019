@@ -10,6 +10,7 @@
     font-weight: 600;
     letter-spacing: .03rem;
     display: flex;
+    margin-bottom: 2rem;
     height: 163px; //MAKE IT ALIGN
 }
 
@@ -30,6 +31,7 @@
             padding-left: 1.3rem;
         }
         
+        
     }
     .active {
         border: 0;
@@ -41,4 +43,3 @@
         }
     }
 }
-

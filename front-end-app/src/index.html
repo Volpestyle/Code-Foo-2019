@@ -10,5 +10,14 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+  
+  document.body.className += ' fade-out'
+  window.onload = function() {
+    var doc = document.getElementsByClassName("fade-out")
+    doc[0].classList.remove("fade-out");
+  }
+  </script>
 </body>
 </html>
