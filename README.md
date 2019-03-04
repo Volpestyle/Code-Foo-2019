@@ -1,5 +1,5 @@
 # Code Foo 2019 - Front End
-A single page web app for loading news content from IGN.com. Made with Angular 7.
+A single page web app for loading news articles and videos from IGN.com. Made with Angular 7.
 
 ## Description 
 This app loads content and comment data from IGN's API at (https://ign-apis.herokuapp.com/). Content can be filtered to either show only videos or only articles. <br /> 
@@ -15,10 +15,13 @@ Inside the Content component, Services are used to request the content from the 
 Inside the Navbar component, a Service is used to request each NavItem. The Model data of each NavItem is simply hard-coded into the Service.  
 
 ### Services
-It is the [*Angular way*](https://angular.io/tutorial/toh-pt4#why-services) to use services to access data instead of components. This is why I used one for HTTP the requests. In addition, they allow for [bi-directional communication](https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service) between components, which was helpful in the case of filtering content results.
+It is the [*Angular way*](https://angular.io/tutorial/toh-pt4#why-services) to use services to access data instead of components. This is why I used one for api requests. However, they also allow for [bi-directional communication](https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service) between components, which I found helpful in the case of filtering content results.
 
 #### HTTP Requests
 All HTTP requests for content within the app reside in a Service cleverly named 'ContentService'. Here I used the 'HTTPClient' Module to make a JSONP request and return whats known as an 'Observable'. (The important thing here is that a JSONP request is used. IGN's api supports JSONP so that clients can bypass the [Same Origin Policy](https://gist.github.com/jesperorb/6ca596217c8dfba237744966c2b5ab1e))
+
+#### Filtering Content Results
+All content data recieved from the api is stored in a Service named 'FilterContentService'. The purpose of this service is to allow communication between NavItems and Content, so that when a user clicks on a menu item, the corresponding content is shown on the page. When a NavItem is clicked, it becomes 'active', and the Service uses information about the active NavItem to correctly filter the content data.
 
 ### Use of Models
 I created a set of models to handle the json being returned by the api
