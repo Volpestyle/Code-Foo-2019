@@ -20,7 +20,7 @@ It is the [*Angular way*](https://angular.io/tutorial/toh-pt4#why-services) to u
 #### HTTP Requests
 All HTTP requests for content within the app reside in a Service cleverly named 'ContentService'. Here I used the 'HTTPClient' Module to make a JSONP request and return whats known as an 'Observable'. (The important thing here is that a JSONP request is used. IGN's api supports JSONP so that clients can bypass the [Same Origin Policy](https://gist.github.com/jesperorb/6ca596217c8dfba237744966c2b5ab1e))
 
-#### Filtering Content Results
+#### Filtering Results
 All content data recieved from the api is stored in a Service named 'FilterContentService'. The purpose of this service is to allow communication between NavItems and Content, so that when a user clicks on a menu item, the corresponding content is shown on the page. When a NavItem is clicked, it becomes 'active', and the Service uses information about the active NavItem to correctly filter the content data.
 
 ### Models
