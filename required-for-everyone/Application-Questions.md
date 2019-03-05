@@ -9,7 +9,6 @@ Team Rocket is at it again! This time they are looking to terrorize the city of 
 ## 3.) 
 After a hard fought battle with a particularly tough Werewolf, renowned Witcher Geralt of Rivia is in need of some new armor. Fortunately, there was a bounty for the recently defeated beast, and for his triumph Geralt has received a good bit of coin ( called Crowns ). Traveling to a nearby armorer, Geralt is faced with more options than he is used to. Given his funds, the Witcher needs to purchase an armor set with the highest possible total armor value.
 
-## 4.)
 Create a program that will determine the armor set of the highest value based on Geralt’s available currency ( Crowns ). An armor set requires one piece of armor of each type (Chest, Leggings, Helmet, Boots) as well as an extra piece that can be of any type.
 
 - 300 Crowns Available
