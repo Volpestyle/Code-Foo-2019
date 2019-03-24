@@ -5,10 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-{/*copy paste table*/}
+//Copy pasted table
 const witcherInventory = 
 `Helmet Serpentine Cruz Headpiece 90 23
 Leggings Famed Pon Leggings 87 22
+Leggings Famed Podddn Leggings 87 21
 Leggings Ursine Trousers 78 18
 Helmet Keeton Mask 77 24
 Leggings Wolven Shinguards 75 15
