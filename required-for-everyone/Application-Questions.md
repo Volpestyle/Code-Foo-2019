@@ -9,6 +9,7 @@
 
 **First I need to find the volume of coit tower in cubic feet and divide it by the volume of a single pokeball. This will give me the amount of pokeballs in Coit Tower and therefore many Team Rocket will walk away with. According to the Wiki, Coit Tower is 210 ft tall. Using Google Earth, I was able to estimate the diameter of the tower to be 12.18 meters or 40 ft.**
 ![coit tower diameter](./google-earth-screenshot.png)
+**This means that the total volume of Coit Tower (using formula for volume of cylinder) is approximately 2.64×10<sup>5</sup> ft<sup>3</sup>. Given that all the pokeballs are full size (not minified for storage), and the diameter of a pokeball is 3.15 inches, the volume of a pokeball is 16.37 inches<sup>3</sup> or 0.00947 ft<sup>3</sup>. **
 
 3.) After a hard fought battle with a particularly tough Werewolf, renowned Witcher Geralt of Rivia is in need of some new armor. Fortunately, there was a bounty for the recently defeated beast, and for his triumph Geralt has received a good bit of coin ( called Crowns ). Traveling to a nearby armorer, Geralt is faced with more options than he is used to. Given his funds, the Witcher needs to purchase an armor set with the highest possible total armor value.
 
