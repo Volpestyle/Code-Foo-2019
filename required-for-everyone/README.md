@@ -1,6 +1,5 @@
 # Question Time!
 
-
 1.) Introduce yourself, explain your connection to IGN, and tell us why we should pick you to participate in IGN’s Code Foo program. Show your enthusiasm and passion for IGN in the form of a YouTube/Vimeo video, written document, audio track, or whatever format you feel most comfortable with. 
 
 __I answered this question with [youtube video.](https://www.youtube.com/watch?v=wVXAjkKyRMc)__
@@ -23,4 +22,8 @@ Create a program that will determine the armor set of the highest value based on
 - Display the final answer.
 - Explain how you implemented the solution. Is your solution successful with other inventories?
 
-__I answered this problem with a React app that can be found here: __ 
+__I implemented the solution to this problem in Javascript inside a React app. I assumed that the inventory had unlimited stock of each item, and that the extra peice of armour could be one of the peices already in the set. The main steps to my solution are as follows:
+1.) Parse table data into array of 'armour' objects. 
+2.) Remove any items that are strictly lower in value. Item A is strictly lower than Item B when A and B are of the same armour type and equal price, but the value of A is lower than B. There is no reason to consider these items.
+3.) Divide the total inventory array into separate arrays divided by type of armour. 
+4.) Use recursion to build every 
