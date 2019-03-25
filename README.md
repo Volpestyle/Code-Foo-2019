@@ -1,7 +1,7 @@
 # Code Foo 2019 - Front End
 A single page web app for loading news articles and videos from IGN.com. Made with Angular 7.
 
-## Usage 
+## How to build locally 
 Once downloaded, you can build and serve the app locally with:
 ```console 
 cd front-end-app
