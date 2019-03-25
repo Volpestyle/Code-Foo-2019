@@ -2,8 +2,12 @@
 
 ## How to build Question 3
 I implemented the solution for Question 3 inside a React app. Once downloaded, you can build this app locally with:
-```console
+```console 
 cd armour-set
+```console
+npm install
+```
+```console
 npm start
 ```
 
