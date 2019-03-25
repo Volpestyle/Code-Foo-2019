@@ -5,7 +5,10 @@ A single page web app for loading news articles and videos from IGN.com. Made wi
 Once downloaded, you can build and serve the app locally with:
 ```console 
 cd front-end-app
+```console
 npm install
+```
+```console
 ng serve --open 
 ```
 
