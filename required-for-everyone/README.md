@@ -1,7 +1,7 @@
 # Question Time!
 
 ## How to build Question 3
-I have placed my React app for question 3 in the Question3 directory. You can build this app locally with:
+I implemented the solution for Question 3 inside a React app. Once downloaded, you can build this app locally with:
 ```console
 cd armour-set
 npm start
@@ -9,10 +9,10 @@ npm start
 
 ## Questions
 
-#### Question 1
+### Question 1
 Introduce yourself, explain your connection to IGN, and tell us why we should pick you to participate in IGN’s Code Foo program. Show your enthusiasm and passion for IGN in the form of a YouTube/Vimeo video, written document, audio track, or whatever format you feel most comfortable with. 
 
-#### Answer
+### Answer
 I answered this question with [youtube video.](https://www.youtube.com/watch?v=wVXAjkKyRMc)
 
 #### Question 2
@@ -37,10 +37,11 @@ Create a program that will determine the armor set of the highest value based on
 - Explain how you implemented the solution. Is your solution successful with other inventories?
 
 #### Answer
-I implemented the solution to this problem in Javascript inside a React app. I assumed that the inventory had unlimited stock of each item, and that the extra peice of armour could be one of the peices already in the set. The main steps to my solution are as follows:
+I assumed that the inventory had unlimited stock of each item, and that the extra peice of armour could be one of the peices already in the set. The main steps to my solution are as follows:
 1. Parse table data into array of 'armour' objects. 
 2. Remove any items that are strictly lower in value. Item A is strictly lower than Item B when A and B are of the same armour type and equal price, but the value of A is lower than B. There is no reason to consider these items.
 3. Divide the total inventory array into separate arrays of each type of armour. One array for each piece we need: Helmet, Chest, Leggings, Boots, and extra (which contains all armour).
 4. Use recursion to build every possible set of armour from the arrays. If the given set is under the budget, compare to the current max set. If the given set's value is greater than the current max set's value, set the given set as the new max set. 
-My app will work with any inventory it is given. The inventory can be modified inside 'index.js'.__
+
+My solution has been successful for any other inventorys given. The inventory can be modified inside 'index.js'.
 
