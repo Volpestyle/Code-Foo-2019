@@ -1,11 +1,13 @@
 # Question Time!
 
-__## Question 3
+## How to build Question 3
 I have placed my React app for question 3 in the Question3 directory. You can build this app locally with:
 ```console
 cd armour-set
 npm start
 ```
+
+## Questions:
 
 1. Introduce yourself, explain your connection to IGN, and tell us why we should pick you to participate in IGN’s Code Foo program. Show your enthusiasm and passion for IGN in the form of a YouTube/Vimeo video, written document, audio track, or whatever format you feel most comfortable with. 
 
