@@ -96,7 +96,7 @@ class App extends Component {
         var a = arr.slice(0); // clone array
         a.push(sets[depth][i]);
         if (depth === sets.length - 1) {
-          if (a.reduce((prev, cur) => prev + cur.costInCrowns, 0) <= budget) {
+          if (a.reduce((prev, cur) => prev + cur.costInCrowns, 0) <= budget) { //compare total cost of current set to our budget
             //the total cost of current set
             var val = a.reduce((prev, cur) => prev + cur.armourValue, 0); //the total value of current set
             if (val > maxValue) {
@@ -157,9 +157,9 @@ class App extends Component {
           {this.state.armourSet ? (
             this.state.armourSet.map(
               ({ armourType, name, costInCrowns, armourValue }, i) => (
-                <div>
+                <div key={i}>
                   {i === 4 ? <span><strong>Extra peice: </strong></span> : <span></span>}
-                  <p key={i}>
+                  <p>
                     <strong> Type: </strong>
                     {armourType}
                     <strong> Name: </strong>
