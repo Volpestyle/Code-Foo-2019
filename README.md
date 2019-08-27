@@ -15,7 +15,7 @@ ng serve --open
 
 ## Description 
 This app loads content and comment data from IGN's API at (https://ign-apis.herokuapp.com/). Content can be filtered to either show only videos or only articles. <br /> 
-To see the app in action, check out the github page [here.](https://volpestyle.github.io/Code-Foo-2019/)
+The challenge prompt can be found here: https://www.ign.com/code-foo/2019
 
 ## Implementation Details
 ### Styling
